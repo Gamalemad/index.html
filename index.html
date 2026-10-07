@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة زفاف محمد و مها</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .font-serif-custom { font-family: 'Amiri', serif; }
+        .bg-overlay { background: rgba(0, 0, 0, 0.6); }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-200">
+
+    <!-- Background Audio -->
+    <audio id="weddingAudio" loop>
+        <source src="https://files.catbox.moe/w3zouv.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Audio Control Button -->
+    <button onclick="toggleAudio()" class="fixed bottom-5 left-5 z-50 bg-amber-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-amber-600 transition flex items-center justify-center">
+        <i id="audioIcon" class="fa-solid fa-music text-lg"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center py-12 px-4" style="background-image: url('https://files.catbox.moe/op44ez.jpeg');">
+        <div class="absolute inset-0 bg-overlay"></div>
+        <div class="relative z-10 text-white max-w-2xl w-full" data-aos="zoom-in" data-aos-duration="1200">
+            <p class="text-amber-300 text-lg md:text-xl font-serif-custom mb-2">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا ﴾</p>
+            <h1 class="text-4xl md:text-6xl font-serif-custom font-bold my-4 text-amber-100">محمد & مها</h1>
+            <p class="text-stone-200 text-base md:text-lg mb-8">يسرنا دعوتكم لمشاركتنا فرحة يوم زفافنا المميز</p>
+
+            <!-- Countdown Timer -->
+            <div class="grid grid-cols-4 gap-2 md:gap-4 max-w-md mx-auto bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+                <div class="text-center">
+                    <span id="days" class="block text-2xl md:text-4xl font-bold text-amber-300">00</span>
+                    <span class="text-xs md:text-sm text-stone-200">يوم</span>
+                </div>
+                <div class="text-center">
+                    <span id="hours" class="block text-2xl md:text-4xl font-bold text-amber-300">00</span>
+                    <span class="text-xs md:text-sm text-stone-200">ساعة</span>
+                </div>
+                <div class="text-center">
+                    <span id="minutes" class="block text-2xl md:text-4xl font-bold text-amber-300">00</span>
+                    <span class="text-xs md:text-sm text-stone-200">دقيقة</span>
+                </div>
+                <div class="text-center">
+                    <span id="seconds" class="block text-2xl md:text-4xl font-bold text-amber-300">00</span>
+                    <span class="text-xs md:text-sm text-stone-200">ثانية</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="py-16 px-4 max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-3xl font-serif-custom font-bold text-stone-800 mb-8 border-b-2 border-amber-400 inline-block pb-2">تفاصيل الموعد والمكان</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Date & Time Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </div>
+                <h3 class="text-xl font-bold text-stone-800 mb-2">الموعد</h3>
+                <p class="text-stone-600 text-lg">الخميس، 29 أكتوبر 2026</p>
+                <p class="text-stone-500 mt-1">الساعة 8:00 مساءً</p>
+            </div>
+
+            <!-- Location Card -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3 class="text-xl font-bold text-stone-800 mb-2">المكان</h3>
+                <p class="text-stone-600 text-lg mb-4">قاعة ليلة العمر - ارض عودة عزبة النخل</p>
+                <a href="https://maps.app.goo.gl/drwJeKAXRXN1DCpg9" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-800 text-white rounded-lg text-sm hover:bg-stone-700 transition">
+                    <i class="fa-solid fa-map-location-dot"></i> الموقع على الخريطة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-stone-500 bg-stone-100 border-t border-stone-200">
+        <p class="font-serif-custom text-lg">حضوركم يسعدنا ويزيد فرحتنا ✨</p>
+        <p class="text-xs text-stone-400 mt-2">عقبال عندكم جميعاً</p>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Countdown Timer Target Date
+        const weddingDate = new Date("2026-10-29T20:00:00").getTime();
+        
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+
+        // Audio Toggle Function
+        function toggleAudio() {
+            const audio = document.getElementById('weddingAudio');
+            const icon = document.getElementById('audioIcon');
+            if (audio.paused) {
+                audio.play();
+                icon.className = 'fa-solid fa-pause text-lg';
+            } else {
+                audio.pause();
+                icon.className = 'fa-solid fa-music text-lg';
+            }
+        }
+    </script>
+</body>
+</html>
